@@ -7,7 +7,7 @@ import { Content } from '../models/content';
   styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent implements OnInit {
-  cards:Content[] = [{
+  contentArray:Content[] = [{
     id: 1,
     title: "test1",
     body: "body1",
