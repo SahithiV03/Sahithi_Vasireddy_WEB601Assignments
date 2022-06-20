@@ -8,7 +8,7 @@ import { Content } from './models/content';
 })
 export class AppComponent {
   title = 'Sahithi_Vasireddy_contentlist';
-  cards:Content[] = [];
+ 
 
   constructor() {}
 
