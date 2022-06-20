@@ -20,12 +20,16 @@ export class List {
         return this.contentArr.length;
     }
 
-    showContentDetails(idx:Number) {
+    showContentDetails(idx:Number): Content {
         for(let i =0;i<this.contentArr.length;i++){
             if(this.contentArr[i].id==idx){
                 return this.contentArr[i];
             }
 
         }
+        return {  id: 0,
+            title: '',
+            author: '',
+            type:''};
   }
 }

@@ -1,0 +1,13 @@
+
+<div class="row container-fluid" style="margin:auto;">
+  <div class="card ml-5 col-4" style="width: 20rem;margin: 10px;" *ngFor="let card of cards">
+      <img [src]="card.imageLink" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{card.title}}</h5>
+        <p class="card-text">{{card.body}}</p>
+        <p class="card-text">{{card.author}}</p>
+        <p class="card-text">{{card.type}}</p>
+        <p class="card-text"><span *ngFor="let tag of card.hashtags" class="badge bg-secondary" style="margin-left:5px ;">{{tag}}</span></p>
+      </div>
+    </div>
+  </div>
