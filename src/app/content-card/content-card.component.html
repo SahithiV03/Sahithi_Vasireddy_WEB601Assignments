@@ -1,6 +1,6 @@
 
 <div class="row container-fluid" style="margin: auto;border:2px solid" [ngClass]="isEven? 'light' : 'white'" *ngIf="content">
-    <header class="card-title">{{ content.title }}</header>
+    <header  class="card-title">{{ content.title }}</header>
 
     <img *ngIf="content.imageLink"
       [src]="content.imageLink"
@@ -10,10 +10,10 @@
     />
     
     <div class="card-body">
-      <p class="card-text">{{ content.body }}</p>
+      <p class="card-text" *ngIf="content.body">{{ content.body }}</p>
       <p class="card-text">{{ content.author }}</p>
       <p class="card-text">{{ content.type }}</p>
-      <p class="card-text">
+      <p class="card-text" *ngIf="content.hashtags.length">
         <span
           *ngFor="let tag of content.hashtags"
           class=""
