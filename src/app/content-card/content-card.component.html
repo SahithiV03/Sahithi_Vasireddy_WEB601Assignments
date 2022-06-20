@@ -1,0 +1,24 @@
+
+<div class="row container-fluid" style="margin: auto;border:2px solid" *ngIf="content">
+    <header class="card-title">{{ content.title }}</header>
+
+    <img *ngIf="content.imageLink"
+      [src]="content.imageLink"
+      class="card-img-top"
+      alt="..."
+      (click)="showData(content)" style="cursor: pointer;"
+    />
+    
+    <div class="card-body">
+      <p class="card-text">{{ content.body }}</p>
+      <p class="card-text">{{ content.author }}</p>
+      <p class="card-text">{{ content.type }}</p>
+      <p class="card-text">
+        <span
+          *ngFor="let tag of content.hashtags"
+          class=""
+          style="margin-left: 5px"
+          >{{ tag }}</span>
+      </p>
+    </div>
+</div>
