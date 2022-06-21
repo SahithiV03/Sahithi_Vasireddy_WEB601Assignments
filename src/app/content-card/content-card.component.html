@@ -1,5 +1,5 @@
 
-<div class="row container-fluid" style="margin: auto;border:2px solid" [ngClass]="isEven? 'light' : 'white'" *ngIf="content">
+<div class="row container-fluid" [class.found]="content.author == searchVal" style="margin: auto;border:2px solid" [ngClass]="isEven? 'light' : 'white'" *ngIf="content">
     <header  class="card-title">{{ content.title }}</header>
 
     <img *ngIf="content.imageLink"

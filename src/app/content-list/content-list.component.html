@@ -5,8 +5,8 @@
     <h4 class="fail" *ngIf="!searchFlag">author not found</h4>
   </div>
   
-  <app-content-card *ngFor="let card of (contentArray | filter);"
-      [content]="card" class="notype" [class.found]="card.author == search.value"></app-content-card>
+  <app-content-card *ngFor="let card of (contentArray);"
+      [content]="card" [searchVal]="search.value" ></app-content-card>
 
 <app-content-card *ngFor="let card of contentArray; even as isEven" [content]="card" [isEven]="isEven" style="color: yellow;
 "></app-content-card>

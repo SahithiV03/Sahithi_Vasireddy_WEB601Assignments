@@ -9,6 +9,7 @@ import { Content } from '../models/content';
 export class ContentCardComponent implements OnInit {
  @Input() content: Content;
  @Input() isEven;
+ @Input() searchVal;
   constructor() { }
 
   ngOnInit(): void {
