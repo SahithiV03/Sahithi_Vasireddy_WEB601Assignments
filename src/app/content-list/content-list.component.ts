@@ -21,7 +21,7 @@ export class ContentListComponent implements OnInit {
     body: "body1",
     author: "author1",
     imageLink: "https://cdn.pixabay.com/photo/2016/10/26/19/00/domain-names-1772242_960_720.jpg",
-    type: "type1",
+    type: "type2",
     hashtags: ["tags1"]
   }, {
     id: 3,
@@ -29,7 +29,7 @@ export class ContentListComponent implements OnInit {
     body: "body1",
     author: "author1",
     imageLink: "https://cdn.pixabay.com/photo/2016/10/26/19/00/domain-names-1772242_960_720.jpg",
-    type: "type1",
+    type: "type3",
     hashtags: ["tags1"]
   }, {
     id: 4,
@@ -37,7 +37,7 @@ export class ContentListComponent implements OnInit {
     body: "body1",
     author: "author1",
     imageLink: "https://cdn.pixabay.com/photo/2016/10/26/19/00/domain-names-1772242_960_720.jpg",
-    type: "type1",
+    type: "",
     hashtags: ["tags1"]
   }, {
     id: 5,
@@ -45,7 +45,25 @@ export class ContentListComponent implements OnInit {
     body: "body1",
     author: "author1",
     imageLink: "https://cdn.pixabay.com/photo/2016/10/26/19/00/domain-names-1772242_960_720.jpg",
-    type: "type1",
+    type: "",
+    hashtags: ["tags1"]
+  },
+  {
+    id: 6,
+    title: "test5",
+    body: "body1",
+    author: "author1",
+    imageLink: "https://cdn.pixabay.com/photo/2016/10/26/19/00/domain-names-1772242_960_720.jpg",
+    type: "type6",
+    hashtags: ["tags1"]
+  },
+  {
+    id: 7,
+    title: "test5",
+    body: "body1",
+    author: "author1",
+    imageLink: "https://cdn.pixabay.com/photo/2016/10/26/19/00/domain-names-1772242_960_720.jpg",
+    type: "type7",
     hashtags: ["tags1"]
   }];
   constructor() { }
