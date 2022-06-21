@@ -61,14 +61,25 @@ export class ContentListComponent implements OnInit {
     id: 7,
     title: "test5",
     body: "body1",
-    author: "author1",
+    author: "author7",
     imageLink: "https://cdn.pixabay.com/photo/2016/10/26/19/00/domain-names-1772242_960_720.jpg",
     type: "type7",
     hashtags: ["tags1"]
   }];
+  searchFlag;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  authorCheck(searchValue: string): void{
+    let searchList = this.contentArray.filter(c => c.author == searchValue);
+    if (searchList.length > 0){
+      this.searchFlag = true;
+    }
+    else{
+      this.searchFlag = false;
+    }
   }
 
 }
