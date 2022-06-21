@@ -1,1 +1,13 @@
 <app-content-card *ngFor="let card of contentArray; even as isEven" [content]="card" [isEven]="isEven"></app-content-card>
+
+<app-content-card *ngFor="let card of (contentArray | filter);"
+[content]="card" ></app-content-card>
+
+  
+  <app-content-card *ngFor="let card of (contentArray | filter: 'type2');"
+                    [content]="card" ></app-content-card>
+  
+                    <app-content-card *ngFor="let card of (contentArray | filter: '');"
+                    [content]="card" ></app-content-card>
+  
+

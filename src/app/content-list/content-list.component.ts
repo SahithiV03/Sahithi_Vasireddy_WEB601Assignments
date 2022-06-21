@@ -29,7 +29,7 @@ export class ContentListComponent implements OnInit {
     body: "body1",
     author: "author1",
     imageLink: "https://cdn.pixabay.com/photo/2016/10/26/19/00/domain-names-1772242_960_720.jpg",
-    type: "type3",
+    type: "type2",
     hashtags: ["tags1"]
   }, {
     id: 4,
