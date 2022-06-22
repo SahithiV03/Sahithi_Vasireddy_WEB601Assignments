@@ -19,7 +19,7 @@
     <div class="card-body">
       <p class="card-text" *ngIf="content.body">{{ content.body }}</p>
       <p class="card-text">{{ content.author }}</p>
-      <p class="card-text" appHighlightImportantData>{{ content.type }}</p>
+      <p class="card-text" appHighlightImportantData ="typestyle">{{ content.type }}</p>
       <p class="card-text" *ngIf="content.hashtags.length">
         <span
           *ngFor="let tag of content.hashtags"
