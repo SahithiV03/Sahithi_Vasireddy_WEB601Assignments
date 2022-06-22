@@ -6,15 +6,21 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 export class HighlightImportantDataDirective {
 
   constructor(public elementRef:ElementRef) { }
-  @Input('appHighlightImportantData') hoverClass:any;  
+  @Input('appHighlightImportantData') hoverClass:any; 
+  @Input() colour;  
+
+
   
   @HostListener('mouseenter') onMouseEnter() {
-    this.elementRef.nativeElement.classList.add(this.hoverClass); //using hostlistener adding the functioanlity of mouseneter
+    this.elementRef.nativeElement.classList.add(this.hoverClass);
  }
 
   @HostListener('mouseleave') onMouseLeave() {
     this.elementRef.nativeElement.classList.remove(this.hoverClass);
   }
 
+  @HostListener('click') onMouseClick() {
+    this.elementRef.nativeElement.style.backgroundColor = (this.colour);
+ }
 
 }
