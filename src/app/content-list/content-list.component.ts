@@ -14,7 +14,7 @@ export class ContentListComponent implements OnInit {
     author: "author1",
     imageLink: "",
     type: "type1",
-    hashtags: ["tags1"]
+    hashtags: ["tags1", "tags2"]
   }, {
     id: 2,
     title: "test2",
