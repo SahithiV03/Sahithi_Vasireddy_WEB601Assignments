@@ -25,7 +25,8 @@ export class ContentService {
           return of(element);
         }
       }
-  
+      return of({id:-1, title: '', author: '',
+        type: '', hashtags:[]});
     }
 
     addContent(newContentItem: Content): Observable<Content[]>{

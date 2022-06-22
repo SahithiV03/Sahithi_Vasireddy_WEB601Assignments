@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ContentService } from './content.service';
 import { Content } from './models/content';
 
 @Component({
@@ -10,15 +11,23 @@ export class AppComponent {
   title = 'Sahithi_Vasireddy_contentlist';
  
 
-  constructor() {}
+card;
+constructor(public content:ContentService) { }
 
   ngOnInit() {
-    this.addData();
+
+    this.content.getContentOnIdbasis(1).subscribe(res =>{
+      console.log(res, 'res');
+      this.card = res;
+    })
   }
 
 
-  addData(){
-
+  getData(id){
+    this.content.getContentOnIdbasis(id).subscribe(res =>{
+      console.log(res, 'res');
+      this.card = res;
+    })
   }
 
 
