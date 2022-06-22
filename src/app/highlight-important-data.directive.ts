@@ -21,6 +21,7 @@ export class HighlightImportantDataDirective {
 
   @HostListener('click') onMouseClick() {
     this.elementRef.nativeElement.style.backgroundColor = (this.colour);
+    
  }
 
 }
