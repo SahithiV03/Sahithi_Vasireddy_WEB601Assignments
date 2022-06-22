@@ -10,7 +10,8 @@
     "generatecomponent": "ng generate component",
     "generateclass": "ng generate class",
     "generateinterface": "ng generate interface",
-    "generatepipe": "ng generate pipe"
+    "generatepipe": "ng generate pipe",
+    "generatedirective": "ng generate directive"    
   },
   "private": true,
   "dependencies": {
