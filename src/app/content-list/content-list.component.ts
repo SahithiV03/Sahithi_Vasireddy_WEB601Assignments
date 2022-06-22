@@ -12,10 +12,14 @@ export class ContentListComponent implements OnInit {
   contentArray:Content[] = [];
   searchFlag;
 
+  constructor(public content:ContentService) { }
 
   ngOnInit(): void {
 
     
+    this.content.getContent().subscribe(res =>{
+      this.contentArray = res;
+    })
     
   }
 
