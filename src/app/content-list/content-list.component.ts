@@ -12,7 +12,7 @@ export class ContentListComponent implements OnInit {
     title: "test1",
     body: "body1",
     author: "author1",
-    imageLink: "https://cdn.pixabay.com/photo/2016/10/26/19/00/domain-names-1772242_960_720.jpg",
+    imageLink: "",
     type: "type1",
     hashtags: ["tags1"]
   }, {
