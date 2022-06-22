@@ -1,6 +1,6 @@
 import { Content } from "../models/content";
 
-export const contentArray:Content[] = [{
+export let content:Content[] = [{
     id: 1,
     title: "test1",
     body: "body1",

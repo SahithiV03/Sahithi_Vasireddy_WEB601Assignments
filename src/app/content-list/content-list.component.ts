@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentService } from '../content.service';
+import { content } from '../data/mockContent';
 import { Content } from '../models/content';
 
 @Component({
@@ -9,9 +11,12 @@ import { Content } from '../models/content';
 export class ContentListComponent implements OnInit {
   contentArray:Content[] = [];
   searchFlag;
-  constructor() { }
+
 
   ngOnInit(): void {
+
+    
+    
   }
 
   authorCheck(searchValue: string): void{
