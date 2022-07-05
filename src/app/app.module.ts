@@ -9,6 +9,7 @@ import { HighlightImportantDataDirective } from './highlight-important-data.dire
 import { DetailComponent } from './detail/detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RouterModule } from '@angular/router';
     ContentCardComponent,
     FilterPipe,
     HighlightImportantDataDirective,
-    DetailComponent
+    DetailComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
