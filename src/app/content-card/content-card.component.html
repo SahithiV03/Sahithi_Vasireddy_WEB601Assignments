@@ -1,6 +1,6 @@
 
 <div class="row container-fluid" [class.found]="content.author == searchVal" style="margin: auto;border:2px solid" [ngClass]="isEven? 'light' : 'white'" *ngIf="content">
-    <header  class="card-title" [appHighlightImportantData] colour="violet">{{ content.title }}</header>
+    <header  class="card-title" [appHighlightImportantData] colour="violet" [routerLink]="['/list', content.id]">{{ content.title }}</header>
 
     <img *ngIf="content.imageLink"
       [src]="content.imageLink"
@@ -17,8 +17,8 @@
   />
 
     <div class="card-body">
-      <p class="card-text" *ngIf="content.body">{{ content.body }}</p>
-      <p class="card-text">{{ content.author }}</p>
+    <!--  <p class="card-text" *ngIf="content.body">{{ content.body }}</p>    
+      <p class="card-text">{{ content.author }}</p> -->
       <p class="card-text" appHighlightImportantData ="typestyle">{{ content.type }}</p>
       <p class="card-text" *ngIf="content.hashtags.length">
         <span
