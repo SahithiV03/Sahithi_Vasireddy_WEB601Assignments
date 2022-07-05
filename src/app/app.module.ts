@@ -10,6 +10,7 @@ import { DetailComponent } from './detail/detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { SearchComponent } from './search/search.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SearchComponent } from './search/search.component';
     FilterPipe,
     HighlightImportantDataDirective,
     DetailComponent,
-    SearchComponent
+    SearchComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
