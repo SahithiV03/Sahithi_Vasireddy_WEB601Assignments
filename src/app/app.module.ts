@@ -15,6 +15,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { LinksComponent } from './links/links.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
+import { ChangeComponent } from './change/change.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     DetailComponent,
     SearchComponent,
     NotfoundComponent,
-    LinksComponent
+    LinksComponent,
+    ChangeComponent
   ],
   imports: [
     BrowserModule,
