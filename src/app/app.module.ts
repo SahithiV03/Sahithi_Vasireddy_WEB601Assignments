@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { SearchComponent } from './search/search.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { LinksComponent } from './links/links.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     HighlightImportantDataDirective,
     DetailComponent,
     SearchComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    LinksComponent
   ],
   imports: [
     BrowserModule,
