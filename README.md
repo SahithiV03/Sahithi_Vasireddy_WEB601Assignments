@@ -30,3 +30,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
  ng generate module app-routing --flat --module=app
  npm run generatecomponent links
+npm i angular-in-memory-web-api

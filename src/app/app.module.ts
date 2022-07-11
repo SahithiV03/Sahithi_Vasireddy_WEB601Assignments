@@ -10,8 +10,10 @@ import { DetailComponent } from './detail/detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { SearchComponent } from './search/search.component';
+import { InMemoryDataService } from './services/in-memory-data.service';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { LinksComponent } from './links/links.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,11 @@ import { LinksComponent } from './links/links.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
+      dataEncapsulation: false,
+      delay: 1000,
+      })
   ],
   providers: [],
   bootstrap: [AppComponent]
