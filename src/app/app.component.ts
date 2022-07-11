@@ -15,19 +15,21 @@ card;
 constructor(public content:ContentService) { }
 
   ngOnInit() {
+    this.content.getContent().subscribe(content => {
+      this.content.getContentOnIdbasis(1, content).subscribe(res =>{
+        console.log(res, 'res');
+        this.card = res;
+      })
+    });
 
-    this.content.getContentOnIdbasis(1).subscribe(res =>{
-      console.log(res, 'res');
-      this.card = res;
-    })
   }
 
 
   getData(id){
-    this.content.getContentOnIdbasis(id).subscribe(res =>{
-      console.log(res, 'res');
-      this.card = res;
-    })
+    // this.content.getContentOnIdbasis(id).subscribe(res =>{
+    //   console.log(res, 'res');
+    //   this.card = res;
+    // })
   }
 
 

@@ -16,13 +16,13 @@ export class SearchComponent implements OnInit {
   }
 
   getData(id){
-    this.content.getContentOnIdbasis(id).subscribe(res =>{
-      console.log(res, 'res');
-      if (res.id== -1) {
-        this.err = true;
-      }
-      this.card = res;
-    })
+    // this.content.getContentOnIdbasis(id).subscribe(res =>{
+    //   console.log(res, 'res');
+    //   if (res.id== -1) {
+    //     this.err = true;
+    //   }
+    //   this.card = res;
+    // })
   }
 
 }

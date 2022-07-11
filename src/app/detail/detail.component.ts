@@ -22,9 +22,9 @@ export class DetailComponent implements OnInit {
   }
 
   getData(id){
-    this._content.getContentOnIdbasis(id).subscribe(res =>{
-      console.log(res, 'res');
-      this.content = res;
-    })
+    // this._content.getContentOnIdbasis(id).subscribe(res =>{
+    //   console.log(res, 'res');
+    //   this.content = res;
+    // })
   }
 }

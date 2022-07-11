@@ -14,6 +14,7 @@ import { InMemoryDataService } from './services/in-memory-data.service';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { LinksComponent } from './links/links.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
+    HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
       delay: 1000,
