@@ -10,10 +10,15 @@ import { Content } from '../models/content';
 })
 export class ChangeComponent implements OnInit {
   contentD;
+  data;
+  check = false;
   constructor(public content:ContentService, private _Activatedroute:ActivatedRoute) {
 
     const id=this._Activatedroute.snapshot.paramMap.get("id");
-    console.log(id, 'd');
+if (id) {
+  this.check = true;
+}
+    this.getData(id);
    }
 
   ngOnInit(): void {
@@ -22,7 +27,6 @@ export class ChangeComponent implements OnInit {
 
   addContent(title: string,body: string,  imageLink: string, author: string, hashtags: string, type: string): void {
     const newData: Content = {
-      id: this.content.genId(this.contentD),
       title: title,
       body: body,
       imageLink: imageLink,
@@ -30,11 +34,22 @@ export class ChangeComponent implements OnInit {
       author: author,
       type: type
     };
-    this.content.addContent(newData).subscribe(res =>{
+    if (this.check) {
+    newData.id = this.data.id;
 
+      this.content.updateContent(newData).subscribe(res =>{
+        console.log('update');
+        
+      } );
+   } else {
+    newData.id = this.content.genId(this.contentD);
+    this.content.addContent(newData).subscribe(res =>{
+      console.log('add');
+
+    } );
       
     }
-      );
+     
 
   }
 
@@ -43,5 +58,15 @@ export class ChangeComponent implements OnInit {
 
       this.contentD = content;
     });
+  }
+
+  getData(id){
+    this.content.getContent().subscribe(content => {
+
+    this.content.getContentOnIdbasis(id, content).subscribe(res =>{
+
+      this.data = res;
+    })
+  })
   }
 }
