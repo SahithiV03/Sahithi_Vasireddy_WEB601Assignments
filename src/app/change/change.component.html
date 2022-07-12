@@ -1,1 +1,27 @@
-<p>change works!</p>
+<p>Add content</p>
+
+
+<div>
+    name: <input #title>
+</div>
+<div>
+    body: <input #body>
+</div>
+
+<div>
+    imageLink: <input #imageLink>
+</div>
+<div>
+    author: <input #author>
+</div>
+<div>
+    hashtags: <input #hashtags>
+</div>
+<div>
+    type: <input #type>
+</div>
+
+
+<div>
+    <button (click)="addContent(title.value,body.value, imageLink.value,author.value, hashtags.value,type.value );body.value='';title.value = '';imageLink.value = '';author.value = ''; hashtags.value = '';type.value = ''">Add content Item</button>
+</div>

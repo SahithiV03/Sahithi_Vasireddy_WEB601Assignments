@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentService } from '../content.service';
-import { content } from '../data/mockContent';
+// import { content } from '../data/mockContent';
 import { Content } from '../models/content';
 
 @Component({
@@ -18,6 +18,7 @@ export class ContentListComponent implements OnInit {
 
     
     this.content.getContent().subscribe(res =>{
+  
       this.contentArray = res;
     })
     

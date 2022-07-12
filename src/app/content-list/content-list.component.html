@@ -13,7 +13,7 @@
 <app-content-card *ngFor="let card of contentArray; even as isEven" [content]="card" [isEven]="isEven" style="color: yellow;
 "></app-content-card>
 
-<app-content-card *ngFor="let card of (contentArray | filter);"
+<!-- <app-content-card *ngFor="let card of (contentArray | filter);"
 [content]="card" style="color: green;
 background: pink;" ></app-content-card>
 
@@ -24,6 +24,6 @@ background: pink;" ></app-content-card>
   
                     <app-content-card *ngFor="let card of (contentArray | filter: '');"
                     [content]="card" style="color: blue;
-                    background: pink;" ></app-content-card>
+                    background: pink;" ></app-content-card> -->
   
 
