@@ -1,5 +1,5 @@
 
-<div class="row container-fluid" *ngIf="content">
+<div class="row container-fluid" *ngIf="content" >
     <header  class="card-title">{{ content.title }}</header>
 
  
@@ -15,7 +15,12 @@
           style="margin-left: 5px"
           appHighlightImportantData="tagstyle"  colour="violet">{{ tag }}</span>
       </p>
+      <a [routerLink]="['/updateContent', content.id]">Edit</a>
     </div>
+
+    
+
+
 </div>
 
 <a routerLink="/list">list</a>
