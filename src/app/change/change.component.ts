@@ -66,6 +66,9 @@ if (id) {
     this.content.getContentOnIdbasis(id, content).subscribe(res =>{
 
       this.data = res;
+      if (res.id == -1) {
+        this.check = false;
+      }
     })
   })
   }
