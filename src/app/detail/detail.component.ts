@@ -13,7 +13,7 @@ export class DetailComponent implements OnInit {
  
     
     const id=this._Activatedroute.snapshot.paramMap.get("id");
-    console.log(id, 'd');
+   
     this.getData(id);
   }
 

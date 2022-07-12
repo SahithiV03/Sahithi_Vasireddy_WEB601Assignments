@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'search', component: SearchComponent },
   { path: 'links', component: LinksComponent },
   { path: 'addContent', component: ChangeComponent },
+  { path: 'updateContent/:id', component: ChangeComponent },
   { path: '**', component: NotfoundComponent },
   { path: '', redirectTo: '/list', pathMatch: 'full' },
 ]

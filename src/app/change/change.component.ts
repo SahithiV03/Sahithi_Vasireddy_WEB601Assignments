@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ContentService } from '../content.service';
 import { Content } from '../models/content';
 
@@ -9,7 +10,11 @@ import { Content } from '../models/content';
 })
 export class ChangeComponent implements OnInit {
   contentD;
-  constructor(public content:ContentService) { }
+  constructor(public content:ContentService, private _Activatedroute:ActivatedRoute) {
+
+    const id=this._Activatedroute.snapshot.paramMap.get("id");
+    console.log(id, 'd');
+   }
 
   ngOnInit(): void {
     this.getCont();
