@@ -2,26 +2,44 @@
 
 
 <div>
-    name: <input #title value="{{data?.title}}">
+    <!-- name: <input #title value="{{data?.title}}"> -->
+    <mat-form-field class="example-full-width">
+        <input matInput value="{{data?.title}}" placeholder="name"  #title>
+      </mat-form-field>
 </div>
 <div>
-    body: <input #body value="{{data?.body}}">
-</div>
-
-<div>
-    imageLink: <input #imageLink value="{{data?.imageLink}}">
-</div>
-<div>
-    author: <input #author value="{{data?.author}}">
-</div>
-<div>
-    hashtags: <input #hashtags value="{{data?.hashtags}}">
-</div>
-<div>
-    type: <input #type value="{{data?.type}}">
+    <!-- body: <input #body value="{{data?.body}}"> -->
+    <mat-form-field class="example-full-width">
+        <input matInput value="{{data?.body}}" placeholder="body"  #body>
+      </mat-form-field>
 </div>
 
+<div>
+    <!-- imageLink: <input #imageLink value="{{data?.imageLink}}"> -->
+    <mat-form-field class="example-full-width">
+        <input matInput value="{{data?.imageLink}}" placeholder="imageLink"  #imageLink>
+      </mat-form-field>
+</div>
+<div>
+    <!-- author: <input #author value="{{data?.author}}"> -->
+    <mat-form-field class="example-full-width">
+        <input matInput value="{{data?.author}}" placeholder="author"  #author>
+      </mat-form-field>
+</div>
+<div>
+    <!-- hashtags: <input #hashtags value="{{data?.hashtags}}"> -->
+    <mat-form-field class="example-full-width">
+        <input matInput value="{{data?.hashtags}}" placeholder="hashtags"  #hashtags>
+      </mat-form-field>
+</div>
+<div>
+    <!-- type: <input #type value="{{data?.type}}"> -->
+    <mat-form-field class="example-full-width">
+        <input matInput value="{{data?.type}}" placeholder="type"  #type>
+      </mat-form-field>
+</div>
+
 
 <div>
-    <button (click)="addContent(title.value,body.value, imageLink.value,author.value, hashtags.value,type.value );body.value='';title.value = '';imageLink.value = '';author.value = ''; hashtags.value = '';type.value = ''">{{check ? 'update' : 'add '}}  content Item</button>
+    <button mat-button (click)="addContent(title.value,body.value, imageLink.value,author.value, hashtags.value,type.value );body.value='';title.value = '';imageLink.value = '';author.value = ''; hashtags.value = '';type.value = ''">{{check ? 'update' : 'add '}}  content Item</button>
 </div>

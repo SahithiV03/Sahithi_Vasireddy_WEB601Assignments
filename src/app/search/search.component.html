@@ -1,5 +1,8 @@
-<input #item type="number">
-<button (click)="getData(item.value)">get item</button>
+<!-- <input #item type="number"> -->
+<mat-form-field class="example-full-width">
+    <input matInput type="number" placeholder="item"  #item>
+  </mat-form-field>
+<button mat-button (click)="getData(item.value)">get item</button>
 <div class="test">
     <app-content-card *ngIf="!err"
     [content]="card" ></app-content-card>

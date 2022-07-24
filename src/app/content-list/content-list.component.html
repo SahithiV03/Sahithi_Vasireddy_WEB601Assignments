@@ -1,8 +1,11 @@
 
 
 <div class="search">
-    <input #search>
-    <button (click)="authorCheck(search.value)">Check For author</button>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="search"  #search>
+  </mat-form-field>
+    <!-- <input #search> -->
+    <button mat-button (click)="authorCheck(search.value)">Check For author</button>
     <h4 class="success" *ngIf="searchFlag">author found</h4>
     <h4 class="fail" *ngIf="!searchFlag">author not found</h4>
   </div>
