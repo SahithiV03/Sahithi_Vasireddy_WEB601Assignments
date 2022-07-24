@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "http-server -p 8081",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -26,9 +26,11 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "@angular/service-worker": "^14.0.0",
     "@babel/helper-builder-binary-assignment-operator-visitor": "^7.18.6",
     "@babel/plugin-proposal-logical-assignment-operators": "^7.18.6",
     "angular-in-memory-web-api": "^0.14.0",
+    "http-server": "^14.1.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
